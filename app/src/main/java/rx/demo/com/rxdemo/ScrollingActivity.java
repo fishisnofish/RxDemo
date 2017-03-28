@@ -107,47 +107,53 @@ public class ScrollingActivity extends AppCompatActivity {
         Arrays.sort(arr, String::compareTo);
 
         Person person = personFactory.create("jack", "man");
-        Person[] persons = new Person[10];
+        Person[] persons = new Person[2];
+        persons[1] = new Person();
+        persons[0] = new Person();
         List<Person> personList = new ArrayList<Person>();
+        personList.add(new Person());
+        personList.add(new Person());
+        personList.add(new Person());
+        personList.add(new Person());
         Arrays.sort(persons, Person::compareByAge);
         Collections.sort(personList, Person::compareByAge);
         Collections.sort(personList, person::compareByAgeLocal);
         Arrays.sort(persons, (a, b) -> a.compare(b));
 
         //8 Founction
-        Function<Integer, String> function = (x) -> "abc" + x;
-        Function<String, String> function2 = (x) -> "abc" + x;
-        function.apply(20);
-        function.andThen(function2).apply(30);
+//        Function<Integer, String> function = (x) -> "abc" + x;
+//        Function<String, String> function2 = (x) -> "abc" + x;
+//        function.apply(20);
+//        function.andThen(function2).apply(30);
 
 
         //9 supplier
-        Supplier<String> supplier = () -> "";
-        System.out.println(supplier.get());
-
-        //10 consumer
-        Consumer<String> consumer1 = (x) -> System.out.print(x);
-        Consumer<String> consumer2 = (x) -> {
-            System.out.println(" after consumer 1");
-        };
-        consumer1.andThen(consumer2).accept("test consumer1");
-
-        //11 predicate
-        Predicate<String> predicate = (x) -> x.length() > 0;
-        System.out.println(predicate.test("String"));
+//        Supplier<String> supplier = () -> "";
+//        System.out.println(supplier.get());
+//
+//        //10 consumer
+//        Consumer<String> consumer1 = (x) -> System.out.print(x);
+//        Consumer<String> consumer2 = (x) -> {
+//            System.out.println(" after consumer 1");
+//        };
+//        consumer1.andThen(consumer2).accept("test consumer1");
+//
+//        //11 predicate
+//        Predicate<String> predicate = (x) -> x.length() > 0;
+//        System.out.println(predicate.test("String"));
 
         //12
         //使用lambda表达式
-        Set<Person> personSet = person.compare(personList,()-> new HashSet<Person>());
+        //Set<Person> personSet = person.compare(personList,()-> new HashSet<Person>());
 
         //使用方法引用
         //引用的是构造方法
-        Set<Person> personSet2 = person.compare(personList, HashSet::new);
+        //Set<Person> personSet2 = person.compare(personList, HashSet::new);
 
         //13 stream
-        Stream.generate(Math::random).limit(10).forEach((Double d) -> System.out.println(d));
-        Stream.generate(Math::random).limit(10).forEach((d) -> System.out.println(d));
-        Stream.generate(Math::random).limit(10).forEach(System.out::println);
+//        Stream.generate(Math::random).limit(10).forEach((Double d) -> System.out.println(d));
+//        Stream.generate(Math::random).limit(10).forEach((d) -> System.out.println(d));
+//        Stream.generate(Math::random).limit(10).forEach(System.out::println);
     }
 
     interface StringCompare<S extends String>{

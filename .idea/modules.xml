@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Rxdemo.iml" filepath="$PROJECT_DIR$/Rxdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/network_lib/network_lib.iml" filepath="$PROJECT_DIR$/network_lib/network_lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/network_lib/network_lib.iml" filepath="$PROJECT_DIR$/network_lib/network_lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxdemo.iml" filepath="$PROJECT_DIR$/rxdemo.iml" />
     </modules>

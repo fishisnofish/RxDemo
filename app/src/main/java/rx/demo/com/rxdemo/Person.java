@@ -19,7 +19,10 @@ public class Person{
     String emailAddress;
 
     public Person(){
-
+        this.name = "tom";
+        this.birthday = new Date();
+        this.gender = Sex.FEMALE;
+        this.emailAddress = "tom@qq.com";
     }
 
     public static Person createPerson(){
@@ -29,6 +32,8 @@ public class Person{
     public Person(String name, String emailAddress){
         this.name = name;
         this.emailAddress = emailAddress;
+        this.gender = Sex.FEMALE;
+        this.birthday = new Date();
     }
 
     public String getEmailAddress() {
